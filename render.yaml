@@ -1,0 +1,17 @@
+{
+  "buildCommand": "npm install && npm run build",
+  "envs": [
+    {
+      "key": "MONGODB_URI",
+      "value": "mongodb+srv://admin:admin@cluster0.mongodb.net/instagram_mern?retryWrites=true&w=majority"
+    },
+    {
+      "key": "JWT_SECRET",
+      "value": "instagram_mern_secret_key_12345"
+    },
+    {
+      "key": "NODE_ENV",
+      "value": "production"
+    }
+  ]
+}
