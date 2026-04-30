@@ -23,7 +23,7 @@ function Login({ setUser }) {
     setLoading(true);
 
     try {
-      const response = await axios.post('/api/auth/login', {
+      const response = await axios.post('/api/login', {
         usernameOrEmailOrPhone: formData.usernameOrEmailOrPhone,
         password: formData.password
       });
