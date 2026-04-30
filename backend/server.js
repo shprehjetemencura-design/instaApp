@@ -28,15 +28,19 @@ const connectDB = async () => {
 connectDB();
 
 
-// 🔴 DEBUG LOGIN (KY DO SHFAQET NE RENDER LOGS)
 app.post("/api/login", (req, res) => {
   console.log("\n🔍 LOGIN REQUEST");
   console.log("📧 Email:", req.body.email);
   console.log("🔑 Password:", req.body.password);
-  console.log("📦 Full Body:", req.body);
-  console.log("=====================================\n");
 
-  res.json({ message: "Login debug received" });
+  // FAKE LOGIN (vetëm për test)
+  res.json({
+    token: "fake-token-123",
+    user: {
+      username: req.body.email,
+      id: 1
+    }
+  });
 });
 
 
